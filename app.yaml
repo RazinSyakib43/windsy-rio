@@ -1,0 +1,18 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+- url: /(.*\.css)
+  static_files: dist/output.css
+  upload: dist/output.css
+- url: /(.*\.css)
+  static_files: src/input.css
+  upload: src/input.css
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: dist/js/script.js
+  upload: dist/js/script.js

@@ -1,0 +1,23 @@
+{
+  "name": "razin-portofolio-webiste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RazinSyakib43/Razin-Portofolio-Webiste.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RazinSyakib43/Razin-Portofolio-Webiste/issues"
+  },
+  "homepage": "https://github.com/RazinSyakib43/Razin-Portofolio-Webiste#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
