@@ -14,6 +14,8 @@ module.exports = {
       },
       screens: {
         '2xl': '1320px',
+        'xs': {'max': '768px'},
+        // => @media (max-width: 768px) { ... }
       }
     },
   },
