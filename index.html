@@ -298,17 +298,17 @@
                 <div class="category w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
                     <nav>
                         <div class="items">
-                            <span class="item active" data-name="all">All</span>
-                            <span class="item" data-name="web-dev">Web Development</span>
-                            <span class="item" data-name="back-end">Back-End Development</span>
-                            <span class="item" data-name="ui-ux">UI/UX Design</span>
+                            <span class="item cat-card" data-filter="all">All</span>
+                            <span class="item cat-card" data-filter="webdev">Web Development</span>
+                            <span class="item cat-card" data-filter="backend">Back-End Development</span>
+                            <span class="item cat-card" data-filter="uiux">UI/UX Design</span>
                         </div>
                     </nav>
                 </div>
             </div>
             <div class="flex flex-wrap">
                 <div class="gallery w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-                    <div class="image mb-12 p-4 md:w-1/2">
+                    <div class="menu-card webdev mb-12 p-4 md:w-1/2">
                         <div class="bg-slate-100 rounded-xl p-6">
                             <div class="rounded-md shadow overflow-hidden">
                                 <a href="https://kencanashop.netlify.app/" target="_blank"> <img
@@ -337,7 +337,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="image mb-12 p-4 md:w-1/2">
+                    <div class="menu-card webdev mb-12 p-4 md:w-1/2">
                         <div class="bg-slate-100 rounded-xl p-6">
                             <div class="rounded-md shadow overflow-hidden">
                                 <a href="https://github.com/RazinSyakib43/Cukurin-Aja.git" target="_blank"> <img
@@ -367,7 +367,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="image mb-12 p-4 md:w-1/2">
+                    <div class="menu-card backend mb-12 p-4 md:w-1/2">
                         <div class="bg-slate-100 rounded-xl p-6">
                             <div class="rounded-md shadow overflow-hidden">
                                 <a href="https://github.com/RazinSyakib43/New-ParentCare.git" target="_blank"> <img
@@ -399,7 +399,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="image mb-12 p-4 md:w-1/2">
+                    <div class="menu-card backend mb-12 p-4 md:w-1/2">
                         <div class="bg-slate-100 rounded-xl p-6">
                             <div class="rounded-md shadow overflow-hidden">
                                 <a href="https://github.com/RazinSyakib43/CariKuliner.git" target="_blank"> <img
@@ -432,7 +432,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="image mb-12 p-4 md:w-1/2">
+                    <div class="menu-card uiux mb-12 p-4 md:w-1/2">
                         <div class="bg-slate-100 rounded-xl p-6">
                             <div class="rounded-md shadow overflow-hidden">
                                 <a href="https://github.com/RazinSyakib43/Bookshelf-Apps" target="_blank"> <img
@@ -463,7 +463,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="image mb-12 p-4 md:w-1/2">
+                    <div class="menu-card uiux mb-12 p-4 md:w-1/2">
                         <div class="bg-slate-100 rounded-xl p-6">
                             <div class="rounded-md shadow overflow-hidden">
                                 <a
@@ -606,6 +606,42 @@
     <!-- Footer End -->
 
     <script src="dist/js/script.js"></script>
+
+        <!-- jquery cdn link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            //Filtering Portfolio
+            $(document).ready(function () {
+
+            // Menambahkan class active pada elemen yang diklik, sehingga akan memiliki warna kuning
+            $(".cat-card").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+
+            // Mengambil nilai atribut "data-filter" dari elemen yang diklik
+            var filter = $(this).attr("data-filter");
+
+            // Jika filter bernilai "all", maka semua menu akan ditampilkan
+            if (filter == "all") {
+            $(".menu-card").show(0);
+
+            // Menu yang ditampilkan adalah semua menu yang ada, dari makanan hingga minuman
+            } else {
+            // Menyembunyikan menu yang tidak sesuai dengan filter yang dipilih
+            $(".menu-card")
+            .not("." + filter)
+            .hide(0);
+
+            // Menampilkan menu yang sesuai dengan filter yang dipilih
+            $(".menu-card." + filter).show(0);
+            }
+            });
+            });
+        </script>
+
+        <!-- magnific popup js cdn link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js">
+        </script>
 </body>
 
 </html>
