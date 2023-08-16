@@ -616,6 +616,11 @@ video {
   margin: 1rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -629,6 +634,16 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mb-10 {
@@ -1114,7 +1129,6 @@ body{
 
 .category .items {
   display: flex;
-  max-width: 720px;
   width: 100%;
   justify-content: space-between;
 }
@@ -1124,16 +1138,16 @@ body{
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  color: #007bff;
+  color: #14b8a6;
   border-radius: 50px;
-  border: 2px solid #007bff;
+  border: 2px solid #14b8a6;
   transition: all 0.3s ease;
 }
 
 .items span.active,
 .items span:hover {
   color: #fff;
-  background: #007bff;
+  background: #14b8a6;
 }
 
 .hover\:border-primary:hover {

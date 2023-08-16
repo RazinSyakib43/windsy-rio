@@ -39,7 +39,6 @@ body{
 
 .category .items {
     display: flex;
-    max-width: 720px;
     width: 100%;
     justify-content: space-between;
 }
@@ -49,15 +48,15 @@ body{
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
-    color: #007bff;
+    color: #14b8a6;
     border-radius: 50px;
-    border: 2px solid #007bff;
+    border: 2px solid #14b8a6;
     transition: all 0.3s ease;
 }
 
 .items span.active,
 .items span:hover {
     color: #fff;
-    background: #007bff;
+    background: #14b8a6;
 }
 
